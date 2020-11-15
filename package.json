@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon --ext md,vue --watch .vuepress --watch . --exec vuepress dev src --host localhost",
     "dev": "vuepress dev src",
     "build": "vuepress build src -d docs"
   },
