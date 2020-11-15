@@ -1,3 +1,6 @@
+---
+sidebar: false
+---
 # Ana Sayfa
 
-<yazilar/>
+

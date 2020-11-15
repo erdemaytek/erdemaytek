@@ -1,8 +1,9 @@
-
-# Prisma schema
+# Prisma Kullanımı
 prisma init /prisma projesi oluştur.
 
 prisma introspect // Ver tabanından şemaları çek
+
+# Prisma schema
 
 # Kurulum
 
@@ -50,7 +51,7 @@ npx prisma introspect
 
 > Bu işlemi yapma sebebimiz `Prisma Client` tarafında sorgular yazarken bu modellerimizi kullanacağımız içindir. Bir nevi veritabanının soyutlamasını yapmış olduk. Buda sorgu yazarken bize ciddi kolaylık sağlacaktır.
 
-![](./resimler/f7itiYw.png)
+![](../resimler/f7itiYw.png)
 
 # Prisma Client Oluşturma ve Yükleme
 
@@ -66,7 +67,7 @@ npm install @prisma/client
 npx prisma generate
 ```
 
-![](./resimler/FensWfo.png)
+![](../resimler/FensWfo.png)
 
 # İlk Sorgumuzu Yazalım
 

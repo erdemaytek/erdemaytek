@@ -1,10 +1,4 @@
----
-tags:
-  - modul
-  - export
-  - import
----
-# Javascriptde Modul Nedir ve Nasıl Kullanılır.
+# Javascript Module Kullanımı
 
 Module denen şey aslında yazdığınız javascript dosyalarıdır. Kod yazarken başımıza gelen en önemli şey kod tekrarı ve karmaşası sorunudur. Module yapısı bize ayrı dosyalarda kodlar yazıp bunları istediğimiz yerde çağırabilme imkanı sunmaktadır. Bu sayade hem kod karmaşasınından hemde tekrardan kurtulmuş oluruz.
 
@@ -12,7 +6,7 @@ Module yapısı node js kullanırsanız daha farklıdır. Onu bu yazımda anlatm
 
  
 
-## ÖN BİLGİLENDİRME
+# ÖN BİLGİLENDİRME
 
 `kullanici.js` Bu dosyada çeşitli fonksiyonlarımız olacak ve burada yazdıklarımızı `export `edip başka sayfada `import `ederecek kullanmayı göreceğiz. 
 
@@ -20,13 +14,13 @@ Module yapısı node js kullanırsanız daha farklıdır. Onu bu yazımda anlatm
 
 `index.html` Sonuçları görmek için test amaçlı kullanacağımız sayfadır.
 
-## EXPORT ETME İŞLEMİ
+# EXPORT ETME İŞLEMİ
 
 Javasript de yazdığımız fonksiyon, nesne vb. dışarı aktarmak için `export`kelimesini kullanırız. `export`kelimesinden sonra `default` yazmak, modülün çağrıldığı yerde varsayılanda çalışacak ve doğrudan erişilebilecek kısımdır.
 
 İki Farklı yöntem ile dosyalarımızı `export`edebiliriz. Hangisini seçeceğiniz sizlere kalmıştır.
 
-### Yöntem 1 (Tek Tek Dışa Aktarım Yapmak)
+## Yöntem 1 (Tek Tek Dışa Aktarım Yapmak)
 
 Bu yöntemde `export` ifadesini ilgili fonksiyon veya neslerin önüne yazarız.
 
@@ -49,7 +43,7 @@ export function kullaniciYasiGetir(kullanici){
 }
 ```
 
-### Yöntem 2 (Toplu Dışarı Aktarım Yapmak)
+## Yöntem 2 (Toplu Dışarı Aktarım Yapmak)
 
 Bu yöntemde kodlarımızın önüne herhangi bir `export` ifadesi olmadan düz yazıyoruz. ve sayfanın sonunda topdan çıkarıyoruz. `export default `işlemi dışındaki tüm durumlarda `export { } `şeklinde yazım ile export yapıyoruz. 
 
@@ -76,7 +70,7 @@ export default Kullanici
 export { kullaniciAdiGetir, kullaniciYasiGetir }
 ```
 
-## IMPORT ETME İŞLEMİ
+# IMPORT ETME İŞLEMİ
 
 - Sadece` export default` ile çıkarılanı eklemek için` import Kullanici from "./kullanici.js"` yazım şekli kullanılır. Burada yazan Kullanici takma isimdir başka birşeyde yazılabilir.
 
@@ -98,7 +92,7 @@ console.log(kullaniciAdiGetir(yeniKullanici));
 console.log(kullaniciYasiGetir(yeniKullanici));
 ```
 
-## TEST
+# TEST
 
 Modülümüzü head tagları arasında çağırıyoruz. Burada` type="module" `eklemeyi unutmuyoruz. Aksi taktirde modülümüzü kullanamayız.
 
@@ -118,8 +112,8 @@ Modülümüzü head tagları arasında çağırıyoruz. Burada` type="module" `e
 
 Console görüntüsü aşağıdaki gibidir.
 
-![](resimler/module_log.png)
+![](../resimler/module_log.png)
 
-## ÖZET
+# ÖZET
 
 Yazmış olduduğun ilgili kodlarını export et, hangi dosyada kullanmak istiyor isen orada import et.
